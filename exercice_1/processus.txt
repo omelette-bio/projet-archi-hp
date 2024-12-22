@@ -1,0 +1,5 @@
+    PID TTY      STAT   TIME COMMAND
+   1263 ?        Ss     0:00 /usr/lib/systemd/systemd --user
+   1265 ?        S      0:00 (sd-pam)
+   1284 tty1     Ss     0:00 -zsh
+   1898 tty1     R+     0:00 ps -x
