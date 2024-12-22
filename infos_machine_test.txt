@@ -1,0 +1,535 @@
+tp1_archi_hp
+============
+
+liste de mes commandes effectuees et leur sortie :
+
+```
+[francois@fedora ~]$ grep siblings /proc/cpuinfo
+siblings	: 8
+siblings	: 8
+siblings	: 8
+siblings	: 8
+siblings	: 8
+siblings	: 8
+siblings	: 8
+siblings	: 8
+```
+
+```
+[francois@fedora ~]$ grep "cpu cores" /proc/cpuinfo
+cpu cores	: 4
+cpu cores	: 4
+cpu cores	: 4
+cpu cores	: 4
+cpu cores	: 4
+cpu cores	: 4
+cpu cores	: 4
+cpu cores	: 4
+```
+
+```
+[francois@fedora ~]$ cat /proc/cpuinfo | grep -E 'processor|model name|cache size|core|sibling|physical'
+processor	: 0
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+processor	: 1
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+processor	: 2
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+processor	: 3
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+processor	: 4
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+processor	: 5
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+processor	: 6
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+processor	: 7
+model name	: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+address sizes	: 39 bits physical, 48 bits virtual
+```
+
+```
+[francois@fedora ~]$ cat /sys/devices/system/cpu/cpu?/topology/core_id
+0
+1
+2
+3
+0
+1
+2
+3
+```
+
+```
+[francois@fedora ~]$ more /sys/devices/system/cpu/cpu?/cache/index?/size
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index3/size
+::::::::::::::
+8192K
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index3/size
+::::::::::::::
+8192K
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index3/size
+::::::::::::::
+8192K
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index3/size
+::::::::::::::
+8192K
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index3/size
+::::::::::::::
+8192K
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index3/size
+::::::::::::::
+8192K
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index3/size
+::::::::::::::
+8192K
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index0/size
+::::::::::::::
+48K
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index1/size
+::::::::::::::
+32K
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index2/size
+::::::::::::::
+1280K
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index3/size
+::::::::::::::
+8192K
+```
+
+```
+[francois@fedora ~]$ more /sys/devices/system/cpu/cpu?/cache/index?/shared_cpu_list
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index0/shared_cpu_list
+::::::::::::::
+0,4
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index1/shared_cpu_list
+::::::::::::::
+0,4
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index2/shared_cpu_list
+::::::::::::::
+0,4
+::::::::::::::
+/sys/devices/system/cpu/cpu0/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index0/shared_cpu_list
+::::::::::::::
+1,5
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index1/shared_cpu_list
+::::::::::::::
+1,5
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index2/shared_cpu_list
+::::::::::::::
+1,5
+::::::::::::::
+/sys/devices/system/cpu/cpu1/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index0/shared_cpu_list
+::::::::::::::
+2,6
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index1/shared_cpu_list
+::::::::::::::
+2,6
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index2/shared_cpu_list
+::::::::::::::
+2,6
+::::::::::::::
+/sys/devices/system/cpu/cpu2/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index0/shared_cpu_list
+::::::::::::::
+3,7
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index1/shared_cpu_list
+::::::::::::::
+3,7
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index2/shared_cpu_list
+::::::::::::::
+3,7
+::::::::::::::
+/sys/devices/system/cpu/cpu3/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index0/shared_cpu_list
+::::::::::::::
+0,4
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index1/shared_cpu_list
+::::::::::::::
+0,4
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index2/shared_cpu_list
+::::::::::::::
+0,4
+::::::::::::::
+/sys/devices/system/cpu/cpu4/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index0/shared_cpu_list
+::::::::::::::
+1,5
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index1/shared_cpu_list
+::::::::::::::
+1,5
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index2/shared_cpu_list
+::::::::::::::
+1,5
+::::::::::::::
+/sys/devices/system/cpu/cpu5/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index0/shared_cpu_list
+::::::::::::::
+2,6
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index1/shared_cpu_list
+::::::::::::::
+2,6
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index2/shared_cpu_list
+::::::::::::::
+2,6
+::::::::::::::
+/sys/devices/system/cpu/cpu6/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index0/shared_cpu_list
+::::::::::::::
+3,7
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index1/shared_cpu_list
+::::::::::::::
+3,7
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index2/shared_cpu_list
+::::::::::::::
+3,7
+::::::::::::::
+/sys/devices/system/cpu/cpu7/cache/index3/shared_cpu_list
+::::::::::::::
+0-7
+```
+
+```
+[francois@fedora ~]$ ls /sys/devices/system/node/node?
+compact    memory105  memory125  memory3   memory51  memory71  memory91
+cpu0       memory106  memory126  memory32  memory52  memory72  memory92
+cpu1       memory107  memory127  memory33  memory53  memory73  memory93
+cpu2       memory108  memory128  memory34  memory54  memory74  memory94
+cpu3       memory109  memory129  memory35  memory55  memory75  memory95
+cpu4       memory11   memory13   memory36  memory56  memory76  memory96
+cpu5       memory110  memory130  memory37  memory57  memory77  memory97
+cpu6       memory111  memory131  memory38  memory58  memory78  memory98
+cpu7       memory112  memory132  memory39  memory59  memory79  memory99
+cpulist    memory113  memory133  memory4   memory6   memory8   memory_failure
+cpumap     memory114  memory134  memory40  memory60  memory80  numastat
+distance   memory115  memory135  memory41  memory61  memory81  power
+hugepages  memory116  memory136  memory42  memory62  memory82  subsystem
+meminfo    memory117  memory137  memory43  memory63  memory83  uevent
+memory0    memory118  memory138  memory44  memory64  memory84  vmstat
+memory1    memory119  memory139  memory45  memory65  memory85  x86
+memory10   memory12   memory14   memory46  memory66  memory86
+memory100  memory120  memory140  memory47  memory67  memory87
+memory101  memory121  memory141  memory48  memory68  memory88
+memory102  memory122  memory142  memory49  memory69  memory89
+memory103  memory123  memory143  memory5   memory7   memory9
+memory104  memory124  memory2    memory50  memory70  memory90
+```
+
+```
+[francois@fedora ~]$ likwid-topology -g
+-------------------------------------------------------------
+CPU type:	Unknown Intel Processor
+*************************************************************
+Hardware Thread Topology
+*************************************************************
+Sockets:	1
+Cores per socket:	4
+Threads per core:	2
+-------------------------------------------------------------
+HWThread	Thread		Core		Socket
+0		0		0		0
+1		0		1		0
+2		0		2		0
+3		0		3		0
+4		1		0		0
+5		1		1		0
+6		1		2		0
+7		1		3		0
+-------------------------------------------------------------
+Socket 0: ( 0 4 1 5 2 6 3 7 )
+-------------------------------------------------------------
+
+*************************************************************
+Cache Topology
+*************************************************************
+Level:	1
+Size:	48 kB
+Cache groups:	( 0 4 ) ( 1 5 ) ( 2 6 ) ( 3 7 )
+-------------------------------------------------------------
+Level:	2
+Size:	1 MB
+Cache groups:	( 0 4 ) ( 1 5 ) ( 2 6 ) ( 3 7 )
+-------------------------------------------------------------
+Level:	3
+Size:	8 MB
+Cache groups:	( 0 4 1 5 2 6 3 7 )
+-------------------------------------------------------------
+
+*************************************************************
+NUMA Topology
+*************************************************************
+NUMA domains: 1
+-------------------------------------------------------------
+Domain 0:
+Processors:  0 1 2 3 4 5 6 7
+Relative distance to nodes:  10
+Memory: 8665.58 MB free of total 15668.7 MB
+-------------------------------------------------------------
+
+*************************************************************
+Graphical:
+*************************************************************
+Socket 0:
++-------------------------------------+
+| +------+ +------+ +------+ +------+ |
+| | 0  4 | | 1  5 | | 2  6 | | 3  7 | |
+| +------+ +------+ +------+ +------+ |
+| +------+ +------+ +------+ +------+ |
+| | 48kB | | 48kB | | 48kB | | 48kB | |
+| +------+ +------+ +------+ +------+ |
+| +------+ +------+ +------+ +------+ |
+| |  1MB | |  1MB | |  1MB | |  1MB | |
+| +------+ +------+ +------+ +------+ |
+| +---------------------------------+ |
+| |               8MB               | |
+| +---------------------------------+ |
++-------------------------------------+
+```
+
+```
+[francois@fedora ~]$ lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          39 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   8
+  On-line CPU(s) list:    0-7
+Vendor ID:                GenuineIntel
+  Model name:             11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+    CPU family:           6
+    Model:                140
+    Thread(s) per core:   2
+    Core(s) per socket:   4
+    Socket(s):            1
+    Stepping:             1
+    CPU(s) scaling MHz:   23%
+    CPU max MHz:          4200.0000
+    CPU min MHz:          400.0000
+    BogoMIPS:             4838.40
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
+                          pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe sysc
+                          all nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bt
+                          s rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_kno
+                          wn_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3
+                          sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt
+                           tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dno
+                          wprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp i
+                          brs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase
+                          tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a avx512f avx5
+                          12dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx51
+                          2cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves sp
+                          lit_lock_detect user_shstk dtherm ida arat pln pts hwp hwp_not
+                          ify hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pk
+                          u ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_b
+                          italg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2
+                          intersect md_clear ibt flush_l1d arch_capabilities
+Virtualization features:
+  Virtualization:         VT-x
+Caches (sum of all):
+  L1d:                    192 KiB (4 instances)
+  L1i:                    128 KiB (4 instances)
+  L2:                     5 MiB (4 instances)
+  L3:                     8 MiB (1 instance)
+NUMA:
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0-7
+Vulnerabilities:
+  Gather data sampling:   Mitigation; Microcode
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Not affected
+  Spec rstack overflow:   Not affected
+  Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer saniti
+                          zation
+  Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB f
+                          illing; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+```
