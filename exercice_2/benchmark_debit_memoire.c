@@ -42,4 +42,5 @@ int main()
     
     debit_mo_s = debit_o_s/(1024*1024);
     printf("debit : %f Mo/s\n", debit_mo_s);
+    return 0;
 }
