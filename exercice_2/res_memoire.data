@@ -1,0 +1,25 @@
+benchmark des temps d'acces et debits de la memoire
+
+essai 1
+temps d'acces moyen : 81.390381 nanosecondes
+debit : 0.786334 o/ns
+debit : 749.906250 Mo/s
+
+essai 2
+temps d'acces moyen : 81.573486 nanosecondes
+debit : 0.784569 o/ns
+debit : 748.222961 Mo/s
+
+essai 3
+temps d'acces moyen : 82.366943 nanosecondes
+debit : 0.777011 o/ns
+debit : 741.015198 Mo/s
+
+essai 4
+temps d'acces moyen : 82.550049 nanosecondes
+debit : 0.775287 o/ns
+debit : 739.371582 Mo/s
+
+moyennes:
+temps d'acces moyen : 81.97 nanosecondes
+debit : 744.629 Mo/s
