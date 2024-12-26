@@ -1,25 +1,27 @@
-benchmark des temps d'acces et debits de la memoire
+benchmark sur un multiplicateur de pas de 2
+temps d'acces moyen : 72.982788 nanosecondes
+debit : 0.876919 o/ns
+debit : 836.295227 Mo/s
+temps d'acces moyen : 56.747437 nanosecondes
+debit : 1.127804 o/ns
+debit : 1075.557983 Mo/s
+temps d'acces moyen : 59.478760 nanosecondes
+debit : 1.076014 o/ns
+debit : 1026.167236 Mo/s
+temps d'acces moyen : 60.760498 nanosecondes
+debit : 1.053316 o/ns
+debit : 1004.520325 Mo/s
 
-essai 1
-temps d'acces moyen : 81.390381 nanosecondes
-debit : 0.786334 o/ns
-debit : 749.906250 Mo/s
-
-essai 2
-temps d'acces moyen : 81.573486 nanosecondes
-debit : 0.784569 o/ns
-debit : 748.222961 Mo/s
-
-essai 3
-temps d'acces moyen : 82.366943 nanosecondes
-debit : 0.777011 o/ns
-debit : 741.015198 Mo/s
-
-essai 4
-temps d'acces moyen : 82.550049 nanosecondes
-debit : 0.775287 o/ns
-debit : 739.371582 Mo/s
-
-moyennes:
-temps d'acces moyen : 81.97 nanosecondes
-debit : 744.629 Mo/s
+benchmark sur un multiplicateur de pas de 3
+temps d'acces moyen : 140.380859 nanosecondes
+debit : 0.455903 o/ns
+debit : 434.782593 Mo/s
+temps d'acces moyen : 121.948242 nanosecondes
+debit : 0.524813 o/ns
+debit : 500.500519 Mo/s
+temps d'acces moyen : 134.033203 nanosecondes
+debit : 0.477494 o/ns
+debit : 455.373383 Mo/s
+temps d'acces moyen : 70.770264 nanosecondes
+debit : 0.904335 o/ns
+debit : 862.440674 Mo/s

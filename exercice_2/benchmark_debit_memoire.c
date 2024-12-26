@@ -7,9 +7,13 @@
 // taille de la ligne de cache en octets
 #define CACHE_LINE_SIZE 64
 
+#ifndef STEP_MULTIPLIER
+#define STEP_MULTIPLIER 2
+#endif
+
 // on fait un grand pas ( 64 / 4 ) * 8 = 16 * 8 = 128
 // peut etre augmente a << 4 si besoin
-int pas = ( CACHE_LINE_SIZE / sizeof(int) ) << 3;
+int pas = ( CACHE_LINE_SIZE / sizeof(int) ) << STEP_MULTIPLIER;
 int i,j,x;
 // tableau de 2 fois la taille du cache
 int tab[( 2 * CACHE_SIZE_MB * 1024 * 1024 )/sizeof(int)];
