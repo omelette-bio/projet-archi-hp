@@ -1,0 +1,17 @@
+
+Calibrator v0.9e
+(by Stefan.Manegold@cwi.nl, http://www.cwi.nl/~manegold/)
+
+CPU loop + L1 access:       1.19 ns =   4 cy
+             ( delay:      23.91 ns =  79 cy )
+
+caches:
+level  size    linesize   miss-latency        replace-time
+  1     96 KB  512 bytes    0.37 ns =   1 cy    2.58 ns =   9 cy
+  2      1 MB  512 bytes    0.09 ns =   0 cy    9.07 ns =  30 cy
+  3     12 MB  512 bytes   34.62 ns = 114 cy   68.88 ns = 227 cy
+
+TLBs:
+level #entries  pagesize  miss-latency
+  1       64       4 KB     3.82 ns =  13 cy 
+

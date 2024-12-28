@@ -19,22 +19,28 @@ set format x '%1.0f'
 set format x2 '%1.0f'
 set format y '%1.0f'
 set format y2 ''
-set xrange[1.000000:5242880.000000]
-#set x2range[1.000000:5242880.000000]
+set xrange[1.000000:1310720.000000]
+#set x2range[1.000000:1310720.000000]
 set yrange[1.000000:1000.000000]
 #set y2range[1.000000:1000.000000]
 set grid x2tics
-set xtics mirror ('1k' 1, '' 2, '4k' 4, '' 8, '16k' 16, '' 32, '64k' 64, '' 128, '256k' 256, '' 512, '1M' 1024, '' 2048, '4M' 4096, '' 8192, '16M' 16384, '' 32768, '64M' 65536, '' 131072, '256M' 262144, '' 524288, '1G' 1048576, '' 2097152, '4G' 4194304)
-set x2tics mirror)
-set y2tics ('(0)' 43.470000, '0.002' 1, '0.02' 10, '0.2' 100, '2' 1000)
-set label 1 '(0)  ' at 1.000000,0.000000 right
-set arrow 1 from 1.000000,0.000000 to 5242880.000000,0.000000 nohead lt 0
- set label 2 '^{ Calibrator v0.9e (Stefan.Manegold\@cwi.nl, www.cwi.nl/~manegold) }' at graph 0.5,graph 0.02 center
-#set label 2    'Calibrator v0.9e (Stefan.Manegold@cwi.nl, www.cwi.nl/~manegold)'    at graph 0.5,graph 0.03 center
+set xtics mirror ('1k' 1, '' 2, '4k' 4, '' 8, '16k' 16, '' 32, '64k' 64, '' 128, '256k' 256, '' 512, '1M' 1024, '' 2048, '4M' 4096, '' 8192, '16M' 16384, '' 32768, '64M' 65536, '' 131072, '256M' 262144, '' 524288, '1G' 1048576)
+set x2tics mirror ('[96k]' 96, '[1M]' 1280, '[12M]' 12288)
+set y2tics ('(4)' 1.190000, '(12)' 3.770000, '(42)' 12.840000, '(270)' 81.720000, '3.3' 1, '33' 10, '330' 100, '3.3e+03' 1000)
+set label 1 '(1.21)  ' at 1.000000,1.212121 right
+set arrow 1 from 1.000000,1.212121 to 1310720.000000,1.212121 nohead lt 0
+set label 2 '(3.64)  ' at 1.000000,3.636364 right
+set arrow 2 from 1.000000,3.636364 to 1310720.000000,3.636364 nohead lt 0
+set label 3 '(12.7)  ' at 1.000000,12.727273 right
+set arrow 3 from 1.000000,12.727273 to 1310720.000000,12.727273 nohead lt 0
+set label 4 '(81.8)  ' at 1.000000,81.818184 right
+set arrow 4 from 1.000000,81.818184 to 1310720.000000,81.818184 nohead lt 0
+ set label 5 '^{ Calibrator v0.9e (Stefan.Manegold\@cwi.nl, www.cwi.nl/~manegold) }' at graph 0.5,graph 0.02 center
+#set label 5    'Calibrator v0.9e (Stefan.Manegold@cwi.nl, www.cwi.nl/~manegold)'    at graph 0.5,graph 0.03 center
 plot \
 0.1 title 'stride:' with points pt 0 ps 0 , \
 'resultats.cache-replace-time.data' using 1:($7-0.000000) title '1024' with linespoints lt 1 pt 3 , \
-'resultats.cache-replace-time.data' using 1:($13-0.000000) title '512' with linespoints lt 2 pt 4 , \
+'resultats.cache-replace-time.data' using 1:($13-0.000000) title '\{512\}' with linespoints lt 2 pt 4 , \
 'resultats.cache-replace-time.data' using 1:($19-0.000000) title '256' with linespoints lt 3 pt 5 , \
 'resultats.cache-replace-time.data' using 1:($25-0.000000) title '128' with linespoints lt 4 pt 6 , \
 'resultats.cache-replace-time.data' using 1:($31-0.000000) title '64' with linespoints lt 5 pt 7 , \
