@@ -1,10 +1,10 @@
 # Calibrator v0.9e
 # (by Stefan.Manegold@cwi.nl, http://www.cwi.nl/~manegold/)
- set term postscript portrait enhanced
- set output 'resultats.cache-replace-time.ps'
-#set term gif transparent interlace small size 500, 707 # xFFFFFF x333333 x333333 x0055FF x005522 x660000 xFF0000 x00FF00 x0000FF
-#set output 'resultats.cache-replace-time.gif'
-set data style linespoints
+# set term postscript portrait enhanced
+# set output 'resultats.cache-replace-time.ps'
+set term gif background "white" interlace small size 800,700
+set output 'resultats.cache-replace-time.gif'
+#set data style linespoints
 set key below
 set title 'resultats.cache-replace-time'
 set xlabel 'memory range [bytes]'
@@ -21,7 +21,7 @@ set format y '%1.0f'
 set format y2 ''
 set xrange[1.000000:327680.000000]
 #set x2range[1.000000:327680.000000]
-set yrange[1.000000:1000.000000]
+set yrange[1.000000:100.000000]
 #set y2range[1.000000:1000.000000]
 set grid x2tics
 set xtics mirror ('1k' 1, '' 2, '4k' 4, '' 8, '16k' 16, '' 32, '64k' 64, '' 128, '256k' 256, '' 512, '1M' 1024, '' 2048, '4M' 4096, '' 8192, '16M' 16384, '' 32768, '64M' 65536, '' 131072, '256M' 262144)

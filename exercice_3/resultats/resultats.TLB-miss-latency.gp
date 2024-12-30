@@ -1,10 +1,10 @@
 # Calibrator v0.9e
 # (by Stefan.Manegold@cwi.nl, http://www.cwi.nl/~manegold/)
- set term postscript portrait enhanced
- set output 'resultats.TLB-miss-latency.ps'
-#set term gif transparent interlace small size 500, 707 # xFFFFFF x333333 x333333 x0055FF x005522 x660000 xFF0000 x00FF00 x0000FF
-#set output 'resultats.TLB-miss-latency.gif'
-set data style linespoints
+# set term postscript portrait enhanced
+# set output 'resultats.TLB-miss-latency.ps'
+set term gif background "white" interlace small size 800, 700
+set output 'resultats.TLB-miss-latency.gif'
+# set data style linespoints
 set key below
 set title 'resultats.TLB-miss-latency'
 set xlabel 'spots accessed'
@@ -21,7 +21,7 @@ set format y '%1.0f'
 set format y2 ''
 set xrange[3.000000:32768.000000]
 #set x2range[3.000000:32768.000000]
-set yrange[1.000000:1000.000000]
+set yrange[1.000000:100.000000]
 #set y2range[1.000000:1000.000000]
 set grid x2tics
 set xtics mirror ('1' 1, '2' 2, '4' 4, '8' 8, '16' 16, '32' 32, '64' 64, '128' 128, '256' 256, '512' 512, '1k' 1024, '2k' 2048, '4k' 4096, '8k' 8192, '16k' 16384, '32k' 32768)
